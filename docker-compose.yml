@@ -1,0 +1,16 @@
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: movie_db
+      MYSQL_USER: vishu
+      MYSQL_PASSWORD: vishu12345
+      MYSQL_ROOT_PASSWORD: vishu12345
+    ports:
+      - "3307:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+
+volumes:
+  dbdata:
